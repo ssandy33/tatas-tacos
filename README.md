@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tata's Tacos
+
+A modern, single-page restaurant website for Tata's Tacos — a family-owned Mexican taco spot in Chicago's Six Corners neighborhood.
+
+## Tech Stack
+
+- **Next.js 14** (App Router) + TypeScript
+- **Tailwind CSS v3** for styling
+- **Framer Motion** for scroll animations
+- **shadcn/ui** for UI components (Button, Card, Separator)
+- **Google Fonts**: Playfair Display (headings) + Inter (body)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with fonts and metadata
+│   ├── page.tsx            # Main page composing all sections
+│   └── globals.css         # Global styles and CSS variables
+├── components/
+│   ├── ui/                 # shadcn/ui components
+│   ├── layout/             # Navbar, Footer
+│   ├── sections/           # Hero, About, Menu, Reviews, Catering, Hours
+│   └── shared/             # Reusable components (animations, cards, headings)
+├── hooks/                  # Custom React hooks
+└── lib/                    # Utilities, fonts, content constants
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Navbar** — Fixed navigation with scroll-triggered background transition and mobile hamburger menu
+2. **Hero** — Full-screen hero with background image, animated text, and CTAs
+3. **About Strip** — Gold-background section with brand story and icon stats
+4. **Featured Menu** — Responsive grid of menu item cards with staggered animations
+5. **Yelp Reviews** — Customer reviews with star ratings and slide-in animations
+6. **Catering Banner** — Split layout promoting catering services
+7. **Hours & Location** — Google Maps embed with address, phone, and hours
+8. **Footer** — Navigation links, social media icons, and copyright
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is ready for deployment on [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel
+```
+
+Or build and deploy to any Node.js hosting platform using `npm run build` and `npm start`.
