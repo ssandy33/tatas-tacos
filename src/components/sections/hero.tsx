@@ -66,7 +66,7 @@ export function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="border-cream text-cream hover:bg-cream/10 font-semibold text-lg px-8 py-6"
+            className="border-cream text-cream bg-transparent hover:bg-cream/10 font-semibold text-lg px-8 py-6"
           >
             <a href="#menu">View Menu</a>
           </Button>
