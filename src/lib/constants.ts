@@ -37,7 +37,7 @@ export const MENU_ITEMS = [
       "Grilled Mexican street corn slathered with chipotle mayo, cotija cheese, tajín, and a squeeze of lime. A perfect side.",
     price: "$5.00",
     image:
-      "https://images.unsplash.com/photo-1470338950318-40e1c17ef3ec?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=600&h=400&fit=crop",
   },
 ] as const;
 
